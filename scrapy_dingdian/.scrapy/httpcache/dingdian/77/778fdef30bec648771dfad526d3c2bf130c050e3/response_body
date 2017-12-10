@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<script type="text/javascript" src="/scripts/m.js"></script>
+<title>科幻小说-顶点小说</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="keywords" content="科幻小说，顶点小说" />
+<meta name="description" content="顶点小说致力于打造快速、免费的在线小说阅读网站，提供精彩的科幻小说小说在线阅读，网站加载快且页面简洁。" />
+<link rel="stylesheet" href="/themes/xiaoshuo/style.css" type="text/css"/>
+<script language="javascript" type="text/javascript" src="/scripts/xiaoshuo.js"></script>
+
+</head>
+<!---->
+<body>
+<div class="main m_head">
+	<div class="h_logo fl"><a href="http://www.x23us.com/"><img src="http://www.x23us.com/themes/xiaoshuo/logo.gif" alt="顶点小说阅读网，免费、稳定的小说网站。" /></a></div>
+	<div class="h_body fl">
+		<div>
+			<p class="fr"><a id="translatelink" rel="nofollow" href="javascript:translatePage();" title="点击[繁/简]切换">繁体版</a> | <a rel="nofollow" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.x23us.com/');" href="javascript:void(0)">设为首页</a> | <a rel="nofollow" href="mailto:admin@23us.com">联系我们</a> | <a rel="nofollow" href="javascript:void(0)" onClick="addFavorite2()">加入收藏</a> | <a href="http://www.x23us.com/jifen.html">积分</a> </p>
+			顶点小说：快速稳定 免费阅读
+		</div>
+		<div>
+			<dl class="fl">	
+			<script>bd_search();</script>
+			</dl>
+			<dl class="fr loginbox"><script language="javascript" type="text/javascript" src="/scripts/denglu.js"></script></dl>
+		</div>
+	</div>
+</div>
+<div class="main m_menu"><ul><li class="m_ml"></li><li><a href="http://www.x23us.com/">顶点首页</a></li><li><a href="/class/1_1.html">玄幻魔法</a></li><li><a href="/class/2_1.html">武侠修真</a></li><li><a href="/class/3_1.html">都市言情</a></li><li><a href="/class/4_1.html">历史军事</a></li><li><a href="/class/5_1.html">侦探推理</a></li><li><a href="/class/6_1.html">网游动漫</a></li><li><a href="/class/7_1.html">科幻小说</a></li><li><a href="/class/8_1.html">恐怖灵异</a></li><li><a href="/class/9_1.html">散文诗词</a></li><li><a href="/class/10_1.html">其他</a></li><li><a href="/quanben/1">全本</a></li><li class="m_bc"><a rel="nofollow" href="http://www.x23us.com/modules/article/bookcase.php"></a></li><li class="m_mr"></li></ul></div>
+<!--top_bar_set-->
+
+<!--top_tongkuai-->
+ 
+
+ 
+<!--中心区域-->
+<div class="main">
+
+	<div id="left"><div class="block"><div class="blocktitle wsd"><i></i>会员推荐科幻小说</div><div class="blockcontent"><ul class="ultop">
+
+  <li><a href="http://www.x23us.com/html/64/64021/" target="_blank">史上最强店主</a></li>
+
+  <li><a href="http://www.x23us.com/html/56/56899/" target="_blank">武侠世界大穿越</a></li>
+
+  <li><a href="http://www.x23us.com/html/52/52031/" target="_blank">异常生物见闻录</a></li>
+
+  <li><a href="http://www.x23us.com/html/63/63987/" target="_blank">废土崛起</a></li>
+
+  <li><a href="http://www.x23us.com/html/63/63512/" target="_blank">位面电梯</a></li>
+
+  <li><a href="http://www.x23us.com/html/67/67026/" target="_blank">两界搬运工</a></li>
+
+  <li><a href="http://www.x23us.com/html/54/54775/" target="_blank">修真四万年</a></li>
+
+  <li><a href="http://www.x23us.com/html/63/63243/" target="_blank">电影世界大盗</a></li>
+
+  <li><a href="http://www.x23us.com/html/62/62940/" target="_blank">机破星河</a></li>
+
+  <li><a href="http://www.x23us.com/html/68/68043/" target="_blank">电影的世界</a></li>
+
+  <li><a href="http://www.x23us.com/html/65/65642/" target="_blank">黑暗王者</a></li>
+
+  <li><a href="http://www.x23us.com/html/67/67174/" target="_blank">阴阳鬼术</a></li>
+
+  <li><a href="http://www.x23us.com/html/65/65736/" target="_blank">主神大道</a></li>
+
+  <li><a href="http://www.x23us.com/html/57/57064/" target="_blank">位面成神之虚空戒</a></li>
+
+  <li><a href="http://www.x23us.com/html/67/67066/" target="_blank">直死无限</a></li>
+
+  <li><a href="http://www.x23us.com/html/0/412/" target="_blank">黑暗血时代</a></li>
+
+  <li><a href="http://www.x23us.com/html/56/56189/" target="_blank">幻想世界大穿越</a></li>
+
+  <li><a href="http://www.x23us.com/html/58/58072/" target="_blank">末世大回炉</a></li>
+
+  <li><a href="http://www.x23us.com/html/60/60546/" target="_blank">末日轮盘</a></li>
+
+  <li><a href="http://www.x23us.com/html/64/64136/" target="_blank">大汉科技帝国</a></li>
+
+  <li><a href="http://www.x23us.com/html/57/57413/" target="_blank">电影世界大抽奖</a></li>
+
+  <li><a href="http://www.x23us.com/html/66/66954/" target="_blank">魔法种族大穿越</a></li>
+
+  <li><a href="http://www.x23us.com/html/53/53497/" target="_blank">阴阳鬼医</a></li>
+
+  <li><a href="http://www.x23us.com/html/67/67469/" target="_blank">杀神永生</a></li>
+
+  <li><a href="http://www.x23us.com/html/54/54978/" target="_blank">位面破坏神</a></li>
+
+  <li><a href="http://www.x23us.com/html/52/52172/" target="_blank">电影世界逍遥行</a></li>
+
+  <li><a href="http://www.x23us.com/html/63/63139/" target="_blank">我的时空穿梭手机</a></li>
+
+  <li><a href="http://www.x23us.com/html/55/55254/" target="_blank">刀碎星河</a></li>
+
+  <li><a href="http://www.x23us.com/html/64/64239/" target="_blank">幻想降临现实</a></li>
+
+  <li><a href="http://www.x23us.com/html/67/67234/" target="_blank">我的房间有扇任意门</a></li>
+
+  <li style=" list-style:none; text-align:right; border:none;"><a href="/top/toptime_1.html">更多...</a></li>
+</ul>
+</div></div>
+		<div class="block">
+			<div class="blocktitle wld"><i></i>排 行 榜</div>
+			<div class="blockcontent wld"><ul class="ulcenter">
+<li><a href="/top/allvisit_1.html">总排行榜</a></li>
+<li><a href="/top/allvote_1.html">总推荐榜</a></li>
+<li><a href="/top/monthvisit_1.html">月排行榜</a></li>
+<li><a href="/top/monthvote_1.html">月推荐榜</a></li>
+<li><a href="/top/weekvisit_1.html">周排行榜</a></li>
+<li><a href="/top/weekvote_1.html">周推荐榜</a></li>
+<li><a href="/top/postdate_1.html">最新入库</a></li>
+<li><a href="/top/lastupdate_1.html">最近更新</a></li>
+<li><a href="/top/goodnum_1.html">总收藏榜</a></li>
+<li><a href="/top/size_1.html">字数排行</a></li>
+</ul>
+<div class="cl" style="margin-top:10px;"></div>
+</div>
+		</div>
+	</div>
+	<div id="centerm"> 
+
+ 
+<!--BOOKcat-->
+
+<div class="cl" style="height:8px;"></div>
+<div class="bdtop"></div>
+<div class="bdsub">
+	<dl id="content">
+	
+<dt><h2>科幻小说 - 文章列表</h2><span><script>class_share();</script></span></dt>
+
+<dd>
+<script>show_class();</script>
+<table style="width:736px;" cellpadding="0" cellspacing="1" bgcolor="#E4E4E4">
+  <tr bgcolor="#F2F2F2">
+    <th width="21%">文章名称</th>
+    <th width="43%">最新章节</th>
+    <th width="13%">作者</th>
+	<th width="8%">字数</th>
+    <th width="9%">更新</th>
+    <th width="6%">状态</th>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/67938" title="佐德之子简介">[简介]</a><a href="http://www.x23us.com/html/67/67938/" target="_blank">佐德之子</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/67/67938/" target="_blank"> 第二百七十三章 八方风雨会中州（六）</a></td>
+    <td class="C">名剑哥</td>
+	<td class="R">1409K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/68151" title="崛起一万年简介">[简介]</a><a href="http://www.x23us.com/html/68/68151/" target="_blank">崛起一万年</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/68/68151/" target="_blank"> 第359章：学习</a></td>
+    <td class="C">宝巨</td>
+	<td class="R">2117K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69242" title="占领二次元简介">[简介]</a><a href="http://www.x23us.com/html/69/69242/" target="_blank">占领二次元</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69242/" target="_blank"> 第三百四十七章 残酷与出击</a></td>
+    <td class="C">下海捞月</td>
+	<td class="R">1834K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/55254" title="刀碎星河简介">[简介]</a><a href="http://www.x23us.com/html/55/55254/" target="_blank">刀碎星河</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/55/55254/" target="_blank"> 第2076章 蚁多咬死象</a></td>
+    <td class="C">猪小小</td>
+	<td class="R">10498K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/64408" title="幻想大炼成简介">[简介]</a><a href="http://www.x23us.com/html/64/64408/" target="_blank">幻想大炼成</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/64/64408/" target="_blank"> 第二百三十章 找上门的麻烦</a></td>
+    <td class="C">咖喱面包</td>
+	<td class="R">7349K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/68038" title="私人科技简介">[简介]</a><a href="http://www.x23us.com/html/68/68038/" target="_blank">私人科技</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/68/68038/" target="_blank"> 589 挥洒青春汗水</a></td>
+    <td class="C">路几层</td>
+	<td class="R">3010K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/63656" title="光脑武尊简介">[简介]</a><a href="http://www.x23us.com/html/63/63656/" target="_blank">光脑武尊</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/63/63656/" target="_blank"> 第1628章 崩溃的原因</a></td>
+    <td class="C">晚间八点档</td>
+	<td class="R">8545K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/67469" title="杀神永生简介">[简介]</a><a href="http://www.x23us.com/html/67/67469/" target="_blank">杀神永生</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/67/67469/" target="_blank"> 第二百四十四章 强大无比</a></td>
+    <td class="C">恐怖的阿肥</td>
+	<td class="R">5046K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/68033" title="青叶灵异事务所简介">[简介]</a><a href="http://www.x23us.com/html/68/68033/" target="_blank">青叶灵异事务所</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/68/68033/" target="_blank"> 第1295章 弃尸（2）</a></td>
+    <td class="C">库奇奇</td>
+	<td class="R">7143K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/67559" title="他是鬼神通简介">[简介]</a><a href="http://www.x23us.com/html/67/67559/" target="_blank">他是鬼神通</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/67/67559/" target="_blank"> 第五百六十四章 能够克制百蛰灵魂的存在</a></td>
+    <td class="C">水果先锋</td>
+	<td class="R">3221K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/65642" title="黑暗王者简介">[简介]</a><a href="http://www.x23us.com/html/65/65642/" target="_blank">黑暗王者</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/65/65642/" target="_blank"> 第七百九十四章：臣服【第一更】</a></td>
+    <td class="C">古羲</td>
+	<td class="R">4670K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/68337" title="平凡的超级英雄简介">[简介]</a><a href="http://www.x23us.com/html/68/68337/" target="_blank">平凡的超级英雄</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/68/68337/" target="_blank"> 第二十七章：星际外交</a></td>
+    <td class="C">青天大佬爷</td>
+	<td class="R">1234K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69478" title="我有一个异世界简介">[简介]</a><a href="http://www.x23us.com/html/69/69478/" target="_blank">我有一个异世界</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69478/" target="_blank"> 143 尼伯顿家族的消息</a></td>
+    <td class="C">碧蓝的世界</td>
+	<td class="R">712K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69379" title="电影世界的无限战争简介">[简介]</a><a href="http://www.x23us.com/html/69/69379/" target="_blank">电影世界的无限战争</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69379/" target="_blank"> 第二百一十五章 交易</a></td>
+    <td class="C">狐狸的梅子酒</td>
+	<td class="R">1318K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/56885" title="奥特曼格斗进化简介">[简介]</a><a href="http://www.x23us.com/html/56/56885/" target="_blank">奥特曼格斗进化</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/56/56885/" target="_blank"> 第一百八十章 消失的赛罗</a></td>
+    <td class="C">猫色</td>
+	<td class="R">4205K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/68154" title="超级蛋蛋简介">[简介]</a><a href="http://www.x23us.com/html/68/68154/" target="_blank">超级蛋蛋</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/68/68154/" target="_blank"> 第二百二十四章 超时空管理局</a></td>
+    <td class="C">月魔小舞</td>
+	<td class="R">1371K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/66954" title="魔法种族大穿越简介">[简介]</a><a href="http://www.x23us.com/html/66/66954/" target="_blank">魔法种族大穿越</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/66/66954/" target="_blank"> 第850章 即将诞生的‘萝莉法则’</a></td>
+    <td class="C">残酷厕纸天使</td>
+	<td class="R">5021K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/56899" title="武侠世界大穿越简介">[简介]</a><a href="http://www.x23us.com/html/56/56899/" target="_blank">武侠世界大穿越</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/56/56899/" target="_blank"> 第二千四百一十七章 算人者人亦算之</a></td>
+    <td class="C">我叫排云掌</td>
+	<td class="R">16602K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/67189" title="赶尸世家简介">[简介]</a><a href="http://www.x23us.com/html/67/67189/" target="_blank">赶尸世家</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/67/67189/" target="_blank"> 第2247章 堵门狗</a></td>
+    <td class="C">紫梦幽龙</td>
+	<td class="R">10099K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/64021" title="史上最强店主简介">[简介]</a><a href="http://www.x23us.com/html/64/64021/" target="_blank">史上最强店主</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/64/64021/" target="_blank"> 第一千二百二十六章 十阶大时代开启</a></td>
+    <td class="C">南极烈日</td>
+	<td class="R">7531K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69216" title="真科技无双简介">[简介]</a><a href="http://www.x23us.com/html/69/69216/" target="_blank">真科技无双</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69216/" target="_blank"> 323章 五角大楼的自己人（5/7求订阅）</a></td>
+    <td class="C">佘大</td>
+	<td class="R">1818K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69576" title="血战之命简介">[简介]</a><a href="http://www.x23us.com/html/69/69576/" target="_blank">血战之命</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69576/" target="_blank"> 第五十二章 任务结束？</a></td>
+    <td class="C">背后有神助C</td>
+	<td class="R">411K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/69438" title="超级共享系统简介">[简介]</a><a href="http://www.x23us.com/html/69/69438/" target="_blank">超级共享系统</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/69/69438/" target="_blank"> 第210章 西维亚的告白</a></td>
+    <td class="C">子凝語</td>
+	<td class="R">1154K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/64699" title="开局血崩的无限简介">[简介]</a><a href="http://www.x23us.com/html/64/64699/" target="_blank">开局血崩的无限</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/64/64699/" target="_blank"> 第九百六十八章幻影旅团</a></td>
+    <td class="C">比雷菲尔特卿</td>
+	<td class="R">5157K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/66787" title="重生归来唯我魔尊简介">[简介]</a><a href="http://www.x23us.com/html/66/66787/" target="_blank">重生归来唯我魔尊</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/66/66787/" target="_blank"> 第一千一百七十二章：我去突个破！（11）</a></td>
+    <td class="C">石头成精</td>
+	<td class="R">6090K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/55259" title="腐烂国度之活下去简介">[简介]</a><a href="http://www.x23us.com/html/55/55259/" target="_blank">腐烂国度之活下去</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/55/55259/" target="_blank"> 第二千三百一十九章 奇怪的集卡车队（七十九）</a></td>
+    <td class="C">奇异果008</td>
+	<td class="R">10435K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/64133" title="超自然异闻录简介">[简介]</a><a href="http://www.x23us.com/html/64/64133/" target="_blank">超自然异闻录</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/64/64133/" target="_blank"> 第1144章 让宁华为之恐惧的考验</a></td>
+    <td class="C">三千狼</td>
+	<td class="R">5877K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/66397" title="无限之次元入侵简介">[简介]</a><a href="http://www.x23us.com/html/66/66397/" target="_blank">无限之次元入侵</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/66/66397/" target="_blank"> 【1197】 实力上镜</a></td>
+    <td class="C">天长长夜凉凉</td>
+	<td class="R">5826K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/66429" title="甲壳狂潮简介">[简介]</a><a href="http://www.x23us.com/html/66/66429/" target="_blank">甲壳狂潮</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/66/66429/" target="_blank"> 1089 战斗警报</a></td>
+    <td class="C">金属裂纹</td>
+	<td class="R">5159K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+  <tr bgcolor="#FFFFFF">
+    <td class="L"><a href="http://www.x23us.com/book/67026" title="两界搬运工简介">[简介]</a><a href="http://www.x23us.com/html/67/67026/" target="_blank">两界搬运工</a></td>
+    <td class="L"><a href="http://www.x23us.com/html/67/67026/" target="_blank"> 第九百八十七章 撕破脸？</a></td>
+    <td class="C">石闻</td>
+	<td class="R">7029K</td>
+    <td class="C">17-11-29</td>
+    <td class="C">连载</td>
+  </tr>
+  
+</table>
+</dd>
+<dd class="pages"><div class="pagelink" id="pagelink"><em id="pagestats">1/93</em><a href="http://www.x23us.com/class/7_1.html" class="first">1</a><a href="http://www.x23us.com/class/7_1.html" class="pgroup">&lt;&lt;</a><strong>1</strong><a href="http://www.x23us.com/class/7_2.html">2</a><a href="http://www.x23us.com/class/7_3.html">3</a><a href="http://www.x23us.com/class/7_4.html">4</a><a href="http://www.x23us.com/class/7_5.html">5</a><a href="http://www.x23us.com/class/7_6.html">6</a><a href="http://www.x23us.com/class/7_7.html">7</a><a href="http://www.x23us.com/class/7_8.html">8</a><a href="http://www.x23us.com/class/7_9.html">9</a><a href="http://www.x23us.com/class/7_10.html">10</a><a href="http://www.x23us.com/class/7_2.html" class="next">&gt;</a><a href="http://www.x23us.com/class/7_16.html" class="ngroup">&gt;&gt;</a><a href="http://www.x23us.com/class/7_93.html" class="last">93</a><kbd><input name="page" type="text" size="4" maxlength="6" onkeydown="if(event.keyCode==13){window.location='http://www.x23us.com/class/7_<{$page}>.html'.replace('<{$page|subdirectory}>', '/' + Math.floor(this.value / 1000)).replace('<{$page}>', this.value); return false;}" /></kbd></div></dd>
+
+
+
+
+	</dl>
+	<div class="cl" style="padding-top:10px;"></div>
+</div>
+
+<!--BOOKcat-->
+ 
+
+</div><!--中间部分DIV结束-->
+ 
+
+</div>
+<!--中心区域结束-->
+
+ 
+<div class="cl" style="height:8px;"></div>
+<div class="main footer">
+<div class="bdtop"><i></i><span title="0.327561"></span></div>
+<div class="ftc">顶点小说网所有小说由网友上传，如有侵犯版权，请来信告知，本站立即予以处理。<br />Copyright &copy; 2011 <a href="http://www.x23us.com/">顶点小说</a>(www.x23us.com) All Rights Reserved. <a href="http://www.x23us.com/map/4.html" target="_blank" style="color:red">全部小说</a></div>
+</div>
+<div style="display:none;width:0px"><script>show_foot();</script></div>
+<script>document.write(unescape('%3Cscript charset="utf-8" src="http://znsv.baidu.com/customer_search/api/js?sid=15772447660171623812') + '&plate_url=' + (encodeURIComponent(window.location.href)) + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script>
+<script src="/scripts/big5.js" type="text/javascript" charset="gb2312"></script>
+</body>
+</html>
