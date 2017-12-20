@@ -5,7 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-from .sql import *    # should use '*',not 'Sql'
+from .sql import Sql    # should use '*',not 'Sql'
 from dingdian.items import DingdianItem
 
 class DingdianPipeline(object):
@@ -20,6 +20,6 @@ class DingdianPipeline(object):
 				xs_name = item['name']
 				xs_author = item['author']
 				category = item['category']
-				Sql.insert_dd_name(xs_name, xs_author, xs_name, name_id)
+				Sql.insert_dd_name(xs_name, xs_author, category, name_id)
 				print('start save the title of novel.')
 
