@@ -1,0 +1,15 @@
+Xcache: hit - plain
+X-Nws-Log-Uuid: 6613a1cf-f2bc-419a-826c-8ac7154376df 9fc91eb65c4db73a14b265b0e494f875
+Content-Encoding: gzip
+X-Cache-Lookup: Hit From Upstream
+X-Cache-Lookup: Hit From Inner Cluster
+X-Cache-Lookup: Hit From Upstream
+Expires: Fri, 12 Jan 2018 03:22:43 GMT
+Vary: Accept-Encoding
+Server: nginx
+X-Daa-Tunnel: hop_count=3
+Last-Modified: Thu, 11 Jan 2018 15:22:34 GMT
+Cache-Control: public, max-age=43200
+Date: Thu, 11 Jan 2018 15:22:43 GMT
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html;charset=UTF-8
