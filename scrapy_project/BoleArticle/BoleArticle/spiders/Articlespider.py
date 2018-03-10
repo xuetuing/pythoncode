@@ -4,15 +4,17 @@ from scrapy.http import Request
 from urllib import parse
 
 from scrapy.loader import ItemLoader
-from BoleArticle.items import BolearticleItem, ArticleItemLoader
+#from BoleArticle.items import BolearticleItem, ArticleItemLoader
+from BoleArticle.items import BolearticleItem
 from BoleArticle.utils.common import get_md5
 
 class JobboleSpider(scrapy.Spider):
 	name = 'BoleArticle'
+	#allowed_domains = ['blog.jobbole.com']
 	allowed_domains = ['blog.jobbole.com']
 	start_urls = ['http://blog.jobbole.com/all-posts/']
 
-    def parse(self, response):
+	def parse(self, response):
 		"""
 		1. 获取文章列表页中的文章url并交给scrapy下载后进行解析
 		2. 获取下一页的url并交给scrapy进行下载，下载完成后交给parse
@@ -44,11 +46,18 @@ class JobboleSpider(scrapy.Spider):
 		selector = response.css(".copyright-area a")
 		if len(selector) != 2:
 			origin_url = selector[0].css("::attr(href)").extract_first("")
+			trans_url = "nothing"
 		else:
 			origin_url = selector[0].css("::attr(href)").extract_first("")
 			trans_url = selector[1].css("::attr(href)").extract_first("")		
 		front_image_url = response.meta.get("front_image_url")
 		url_id = get_md5(response.url)
+
+		article_item["title"] = title
+		article_item["create_date"] = create_date
+		article_item["origin_url"] = origin_url
+		article_item["trans_url"] = trans_url
+		article_item["url_id"] = url_id
 
 		'''
 		item_loader = ArticleItemLoader(item=JobBoleArticleItem(), response=response)

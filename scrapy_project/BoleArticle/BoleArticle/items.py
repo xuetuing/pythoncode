@@ -13,18 +13,18 @@ import scrapy
 
 
 class BolearticleItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    title = scrapy.Field()
-    create_date = scrapy.Field()
-    origin_url = scrapy.Field()
-    trans_url = scrapy.Field()
-    front_image_url = scrapy.Field()
-    front_image_path = scrapy.Field()
-    url_id =scrapy.Field()
-    
+	# define the fields for your item here like:
+	# name = scrapy.Field()
+	title = scrapy.Field()
+	create_date = scrapy.Field()
+	origin_url = scrapy.Field()
+	trans_url = scrapy.Field()
+	front_image_url = scrapy.Field()
+	front_image_path = scrapy.Field()
+	url_id = scrapy.Field()
 
- '''
+
+'''
 def add_jobbole(value):
     return value+'-bobby'
 

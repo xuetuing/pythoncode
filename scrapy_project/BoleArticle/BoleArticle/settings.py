@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'BoleArticle.spiders'
 #USER_AGENT = 'BoleArticle (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -65,10 +65,11 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-#    'BoleArticle.pipelines.BolearticlePipeline': 300,
+    'BoleArticle.pipelines.BolearticlePipeline': 300,
 	# 'scrapy.pipelines.images.ImagesPipeline': 1,
     #'ArticleSpider.pipelines.ArticleImagePipeline': 2,
-    'BoleArticle.pipelines.MysqlPipeline': 1,
+	#'BoleArticle.pipelines.MysqlPipeline': 1,
+	'BoleArticle.pipelines.MysqlTwistedPipeline': 1,
 }
 IMAGES_URLS_FIELD = 'front_image_url'
 IMAGES_STORE = "/home/hacker/pythonts/image"
@@ -97,7 +98,7 @@ IMAGES_STORE = "/home/hacker/pythonts/image"
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-# MYSQL_HOST = '172.0.0.1'
-# MYSQL_DBNAME = 'article_spider'
-# MYSQL_USER = 'root'
-# MYSQL_PASSWORD = '123'
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'BoleArticle'
+MYSQL_USER = 'xuetu'
+MYSQL_PASSWORD = '888'
