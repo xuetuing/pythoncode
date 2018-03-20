@@ -1,0 +1,8 @@
+sigin url : https://www.zhihu.com/api/v3/oauth/sign_in
+cookie
+x-xsrftoken
+iden_url1 :https://www.zhihu.com/api/v3/oauth/captcha?lang=en
+iden_url2:https://www.zhihu.com/api/v3/oauth/captcha?lang=cn
+
+there are to iden ways
+iden_url2 request first, readme for iden_url1

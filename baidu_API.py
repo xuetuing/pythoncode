@@ -10,7 +10,7 @@ SECRET_KEY = 'jsNPrC9cUhGKjGdeGKpuZ2VaAu0B4ztu'
 
 aipocr = AipOcr(APP_ID,API_KEY,SECRET_KEY)
 
-fpath = "/home/hacker/Downloads/timg.jpeg"
+fpath = "/home/hacker/pythonts/im.png"
 def get_content(fpath):
 	with open(fpath,'rb') as fp:
 		return fp.read()
