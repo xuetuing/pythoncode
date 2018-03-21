@@ -15,7 +15,12 @@ import re
 import time
 import json
 
-
+session = requests.session()
+session.cookies = cookielib.LWPCookieJar(filename='cookies.txt')
+try:
+    session.cookies.load(ignore_discard=True)
+except:
+    print('cookies reload faill!')
 def get_xsrf():
     # 获取xsrf code
     response = session.get('https://www.zhihu.com', headers=header)
@@ -56,7 +61,21 @@ def get_captcha():
         captcha['input_points'].append(points[int(i) - 1])
     return json.dumps(captcha)
 
+def get_index():
+    response = session.get("https://www.zhihu.com/inbox",headers=header)
+    with open("index.html","wb") as f:
+        f.write(response.text.encode('utf-8'))
+        f.close()
+    print('ok')
 
+def is_login():
+    inbox_url = 'https://www.zhihu.com/inbox'
+    response = session.get(inbox_url,headers=header)
+    if response.statu_code != 200:
+        return False
+    else:
+        return True
+    
 def zhihu_login(account, password):
     # 知乎登录
     if re.match('1\d{10}', account):
@@ -71,6 +90,7 @@ def zhihu_login(account, password):
         }
 
         response_text = session.post(post_url, data=post_data, headers=header)
+        session.cookies.save()
         response_text = json.loads(response_text.text)
         if 'msg' in response_text and response_text['msg'] == '登录成功':
             print('登录成功！')
@@ -85,8 +105,7 @@ if __name__ == '__main__':
         'Referer': 'https://www.zhihu.com',
         'User-agent': agent,
     }
-    session = requests.session()
     account = '18224509954' 
     pwd = 'tj141664'
-    zhihu_login(account, pwd)
-
+    #zhihu_login(account, pwd)
+    get_index()
