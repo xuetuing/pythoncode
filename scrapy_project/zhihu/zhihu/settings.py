@@ -9,12 +9,16 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+import sys
+
 BOT_NAME = 'zhihu'
 
 SPIDER_MODULES = ['zhihu.spiders']
 NEWSPIDER_MODULE = 'zhihu.spiders'
 
-
+#path = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(1 ,'/home/hacker/Pythoncode/scrapy_project')
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'zhihu (+http://www.yourdomain.com)'
 
@@ -64,9 +68,10 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'zhihu.pipelines.ZhihuPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   #'zhihu.pipelines.ZhihuPipeline': 300,
+   'zhihu.pipelines.LgjobsqlPipeline': 1,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
