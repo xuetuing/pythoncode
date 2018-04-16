@@ -1,0 +1,51 @@
+1523886385089	geckodriver	INFO	geckodriver 0.19.1
+1523886385109	geckodriver	INFO	Listening on 127.0.0.1:60877
+1523886389426	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.LipH4rbO9tFc"
+1523886403972	Marionette	INFO	Listening on port 2828
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-36116321-2&l=dataLayer, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-36116321-2&l=dataLayer, line 69: unreachable code after return statement
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1523887115108	geckodriver	INFO	Listening on 127.0.0.1:48171
+1523887115275	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.UrghOS9PFeTX
+1523887115278	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1523887115296	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35655
+1523887119792	Marionette	INFO	Listening on port 35655
+1523887121946	Marionette	WARN	TLS certificate errors will be ignored for this session
+1523887189484	geckodriver	INFO	Listening on 127.0.0.1:38067
+1523887190106	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.q8NZuLmrjAUj
+1523887190109	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1523887190151	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35169
+1523887202446	Marionette	INFO	Listening on port 35169
+1523887204788	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.2345.com/?8116, line 1: ReferenceError: show_userct is not defined
+JavaScript error: https://www.2345.com/?8116, line 1: ReferenceError: hide_userct_box is not defined
+JavaScript error: https://www.2345.com/?8116, line 1: ReferenceError: hide_userct_box is not defined
+JavaScript error: chrome://browser/content/tabbrowser.xml, line 3207: TypeError: this.tabs is undefined
+JavaScript error: chrome://browser/content/tabbrowser.xml, line 3207: TypeError: this.tabs is undefined
+[Child 2525] ###!!! ABORT: Aborting on channel error.: file /build/firefox-esr-52.7.3esr/ipc/glue/MessageChannel.cpp, line 2152
+[Child 2525] ###!!! ABORT: Aborting on channel error.: file /build/firefox-esr-52.7.3esr/ipc/glue/MessageChannel.cpp, line 2152
+1523887295262	geckodriver	INFO	Listening on 127.0.0.1:41173
+1523887295659	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.UA5vkTgPHIhK
+1523887295662	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1523887295688	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45075
+1523887300752	Marionette	INFO	Listening on port 45075
+1523887301790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1523887348426	geckodriver	INFO	Listening on 127.0.0.1:48697
+1523887349640	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4G9L42T2MO0R
+1523887349642	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1523887349646	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40293
+1523887352962	Marionette	INFO	Listening on port 40293
+1523887353904	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-36116321-2&l=dataLayer, line 69: unreachable code after return statement
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=UA-36116321-2&l=dataLayer, line 69: unreachable code after return statement
+1523887801619	geckodriver	INFO	Listening on 127.0.0.1:36899
+1523887802637	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.5h2sZG2Ddd5v
+1523887802639	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox with args []
+1523887802643	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39049
+1523887805710	Marionette	INFO	Listening on port 39049
+1523887806658	Marionette	WARN	TLS certificate errors will be ignored for this session

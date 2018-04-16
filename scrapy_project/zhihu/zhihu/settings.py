@@ -59,7 +59,7 @@ ROBOTSTXT_OBEY = False
 #DOWNLOADER_MIDDLEWARES = {
 #    'zhihu.middlewares.ZhihuDownloaderMiddleware': 543,
 #}
-
+RANDOM_UA_TYPE = "random"
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
