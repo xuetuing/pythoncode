@@ -4,9 +4,9 @@ class Storage(object):
     def __init__(self):
         self.datas = []
     
-    def data_saved(self, data):
-        if data:
-            self.datas.append(data)
+    def data_saved(self, datas):
+        if datas:
+            self.datas.extend(datas)
         else:
             return
 
@@ -19,13 +19,15 @@ class Storage(object):
             fi.write("<body>")
             fi.write("<table>")
             for data in self.datas:
+                fi.write("<tr>")
                 fi.write("<td>%s</td>" % data["url"])
                 fi.write("<td>%s</td>" % data["cour_name"])
                 fi.write("<td>%s</td>" % data["desc"])
+                fi.write("</tr>")
+                self.datas.remove(data)
             fi.write("</table>")
             fi.write("</body>")
-            fi.write("</html>")
-            self.datas.pop(data)
+            fi.write("</html>")         
             fi.close()         
            
             

@@ -1,7 +1,7 @@
-from shiyanlou.HtmlDownloader import HtmlDownloader
-from shiyanlou.HtmlParser import HtmlParser
-from shiyanlou.Store import Storage
-from shiyanlou.URLmanager import Urlmanager
+from Dspider.HtmlDownloader import HtmlDownloader
+from Dspider.HtmlParser import HtmlParser
+from Dspider.Store import Storage
+from Dspider.URLmanager import Urlmanager
 
 class SpisderMain(object):
     """ dispatcher of spider """
