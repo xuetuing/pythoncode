@@ -59,11 +59,12 @@ if __name__ == '__main__':
     conn_q = Queue()
     result_q = Queue()
     store_q = Queue()
+    root_url = 'https://www.shiyanlou.com/courses/'
 
     node = NodeManager()
     manager = node.start_manager(url_q,result_q)
 
-    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q))
+    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q,root_url))
     result_solve_proc = Process(target=node.result_solve_proc,args=(result_q,conn_q,store_q))
     store_proc = Process(target=node.store_proc,args=(store_q))
 
