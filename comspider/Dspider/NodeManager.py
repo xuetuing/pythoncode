@@ -1,5 +1,5 @@
 from queue import Queue
-from multiprocessing.managers import BaseManager
+from multiprocessing.managers import BaseManager,Process
 from URLmanager import Urlmanager
 import time
 from Store import Storage
@@ -48,7 +48,7 @@ class NodeManager(object):
             if not store_q.empty():
                 data = store_q.get()
                 if data == "end":
-                    output.outhtml(filepath)
+                    output.outhtml_end(filepath)
                     return
                 output.data_saved(data)
         except:
@@ -59,3 +59,16 @@ if __name__ == '__main__':
     conn_q = Queue()
     result_q = Queue()
     store_q = Queue()
+
+    node = NodeManager()
+    manager = node.start_manager(url_q,result_q)
+
+    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q))
+    result_solve_proc = Process(target=node.result_solve_proc,args=(result_q,conn_q,store_q))
+    store_proc = Process(target=node.store_proc,args=(store_q))
+
+    url_manager_proc.start()
+    result_solve_proc.start()
+    store_proc.start()
+
+    manager.get_server().serve_forever()
