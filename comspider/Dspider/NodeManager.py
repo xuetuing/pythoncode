@@ -1,5 +1,6 @@
 from queue import Queue
-from multiprocessing.managers import BaseManager,Process
+from multiprocessing.managers import BaseManager
+from multiprocessing import Process
 from URLmanager import Urlmanager
 import time
 from Store import Storage
@@ -9,7 +10,7 @@ class NodeManager(object):
     def start_manager(self,url_q,result_q):
         BaseManager.register("get_task_queue",callable=lambda:url_q)
         BaseManager.register("get_result_queue",callable=lambda:result_q)
-        manager = BaseManager(address=('',8001),authkey='shiyanlou')
+        manager = BaseManager(address=('192.168.1.5',8001),authkey=b'shiyanlou')
         return manager
 
     def url_manager_proc(self,conn_q,url_q,root_url):
@@ -25,7 +26,7 @@ class NodeManager(object):
                 if not conn_q.empty():
                     urls = conn_q.get()                    
                     url_manager.add_new_urls(urls)
-            except BaseException,e:
+            except BaseException as e:
                 time.sleep(1)
 
     def result_solve_proc(self, result_q,conn_q,store_q):
@@ -59,14 +60,14 @@ if __name__ == '__main__':
     conn_q = Queue()
     result_q = Queue()
     store_q = Queue()
-    root_url = 'https://www.shiyanlou.com/courses/'
+    #root_url = 'https://www.shiyanlou.com/courses/'
 
     node = NodeManager()
     manager = node.start_manager(url_q,result_q)
 
-    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q,root_url))
+    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q,"https://www.shiyanlou.com/courses/"))
     result_solve_proc = Process(target=node.result_solve_proc,args=(result_q,conn_q,store_q))
-    store_proc = Process(target=node.store_proc,args=(store_q))
+    store_proc = Process(target=node.store_proc,args=(store_q,))
 
     url_manager_proc.start()
     result_solve_proc.start()
