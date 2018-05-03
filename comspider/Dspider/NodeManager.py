@@ -13,7 +13,7 @@ class NodeManager(object):
         manager = BaseManager(address=('192.168.1.5',8001),authkey=b'shiyanlou')
         return manager
 
-    def url_manager_proc(self,conn_q,url_q,root_url):
+    def url_manager_proc(self,url_q,conn_q,root_url):
         url_manager = Urlmanager()
         url_manager.add_new_url(root_url)
         while (url_manager.has_new_url()):
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     node = NodeManager()
     manager = node.start_manager(url_q,result_q)
 
-    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,result_q,"https://www.shiyanlou.com/courses/"))
+    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,conn_q,"https://www.shiyanlou.com/courses/"))
     result_solve_proc = Process(target=node.result_solve_proc,args=(result_q,conn_q,store_q))
     store_proc = Process(target=node.store_proc,args=(store_q,))
 
