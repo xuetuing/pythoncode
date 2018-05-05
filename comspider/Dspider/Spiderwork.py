@@ -7,7 +7,7 @@ class SpiderWork(object):
     def __init__(self):
         BaseManager.register("get_task_queue")
         BaseManager.register("get_result_queue")
-        server_addr = '192.168.1.4'
+        server_addr = '127.0.0.1'
         print("Connect to %s..." % server_addr)
         self.m = BaseManager(address=(server_addr,8001),authkey=b'shiyanlou')
         self.m.connect()
@@ -19,15 +19,18 @@ class SpiderWork(object):
     def crawler(self):
         while(True):
             try:
-                if not self.task.empty():
+                if not self.task.empty():       
                     new_url = self.task.get()
+                    print(new_url)
                 if new_url == 'end':
                     print("接收结束通知！")
                     self.result.put({'new_urls':'end','data':'end'})
                     return
                 response = self.downloader.download(new_url)
                 new_urls,datas = self.parser.parse(response)
+                #print(datas)           
                 self.result.put({'new_urls':new_urls,'data':datas})
+
             except EOFError as e:
                 print("connection failed!")
                 return

@@ -11,9 +11,10 @@ class Storage(object):
 	def data_saved(self, datas):
 		if  datas is None:
 			return
-			self.datas.extend(datas)
+		self.datas.extend(datas)
+		print(len(self.datas))
 		if len(self.datas) > 10:
-			self.outhtml_body(self.fipath)
+			self.outhtml_body()
 
 	def outhtml_head(self):
 		fi = codecs.open(self.fipath,"w",encoding="utf-8")

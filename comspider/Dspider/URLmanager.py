@@ -19,6 +19,7 @@ class Urlmanager(object):
         
     def get_new_url(self):
         new_url = self.new_urls.pop()
+        print("get new url:%s" % new_url)
         url_md5 = get_md5(new_url)[8:-8]
         self.old_urls.add(url_md5)
         return new_url
@@ -28,6 +29,7 @@ class Urlmanager(object):
             return
         url_md5 = get_md5(url)[8:-8]
         if url not in self.new_urls and url_md5 not in self.old_urls:
+            print("add new url.")
             self.new_urls.add(url)
         
     def add_new_urls(self, urls):

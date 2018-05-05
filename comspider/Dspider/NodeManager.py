@@ -15,15 +15,20 @@ class NodeManager(object):
     def url_manager_proc(self,url_q,conn_q,root_url):
         url_manager = Urlmanager()
         url_manager.add_new_url(root_url)
-        while (url_manager.has_new_url()):
-            new_url = url_manager.get_new_url()
-            url_q.put(new_url)
-            print("old_url= ",url_manager.old_urls_size())
-            if url_manager.old_urls_size() >=200:
-                url_q.put("end")
+        while True:
+            while (url_manager.has_new_url()):
+                new_url = url_manager.get_new_url()
+                url_q.put(new_url)
+                print("old_url= ",url_manager.old_urls_size())
+                if url_manager.old_urls_size() >= 20:
+                    url_q.put("end")
+                    print("send 'end' info!")
+                    url_manager.save_process("new_urls.txt",url_manager.new_urls)
+                    url_manager.save_process("old_urls.txt",url_manager.old_urls)
+                    return
             try:
                 if not conn_q.empty():
-                    urls = conn_q.get()                    
+                    urls = conn_q.get()                   
                     url_manager.add_new_urls(urls)
             except BaseException as e:
                 time.sleep(1)
@@ -38,33 +43,38 @@ class NodeManager(object):
                         store_q.put("end")
                         return
                     conn_q.put(content["new_urls"])
+                    #print(conn_q.get())
                     store_q.put(content["data"])
+                    #print(store_q.get())
+                else:
+                    time.sleep(0.1)
             except:
                 time.sleep(1)
 
     def store_proc(self, store_q):
         output = Storage()
-        try:
+        while True:
             if not store_q.empty():
                 data = store_q.get()
+                #print(data)
                 if data == "end":
                     output.outhtml_end()
                     return
                 output.data_saved(data)
-        except:
-            time.sleep(1)
+            else:
+                time.sleep(1)
 
 if __name__ == '__main__':
     url_q = Queue()
     conn_q = Queue()
     result_q = Queue()
     store_q = Queue()
-    #root_url = 'https://www.shiyanlou.com/courses/'
+    root_url = 'https://www.shiyanlou.com/courses/'
 
     node = NodeManager()
     manager = node.start_manager(url_q,result_q)
 
-    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,conn_q,"https://www.shiyanlou.com/courses/"))
+    url_manager_proc = Process(target=node.url_manager_proc,args=(url_q,conn_q,root_url))
     result_solve_proc = Process(target=node.result_solve_proc,args=(result_q,conn_q,store_q))
     store_proc = Process(target=node.store_proc,args=(store_q,))
 
