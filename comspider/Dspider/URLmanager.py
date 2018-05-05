@@ -1,6 +1,7 @@
 import hashlib
 import pickle
 from utils import get_md5
+from multiprocessing import Queue
 
 class Urlmanager(object):
     """manager URL for spider """
@@ -54,4 +55,14 @@ class Urlmanager(object):
 
     def save_process(self, path,data):
         with  open(path,"wb") as f:
-            pickle.dumps(data,f)
+            pickle.dump(data,f)
+# if __name__ == '__main__':
+#     url = "www.baidu.com"
+#     url_q = Queue()
+#     manager = Urlmanager()
+#     manager.add_new_url(url)
+#     if manager.has_new_url():
+#         new_url = manager.get_new_url()
+#         url_q.put(new_url)
+#         a = url_q.get()
+#         print(a)

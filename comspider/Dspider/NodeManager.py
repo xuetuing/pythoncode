@@ -1,6 +1,5 @@
-from queue import Queue
 from multiprocessing.managers import BaseManager
-from multiprocessing import Process
+from multiprocessing import Process,Queue
 from URLmanager import Urlmanager
 import time
 from Store import Storage
@@ -10,7 +9,7 @@ class NodeManager(object):
     def start_manager(self,url_q,result_q):
         BaseManager.register("get_task_queue",callable=lambda:url_q)
         BaseManager.register("get_result_queue",callable=lambda:result_q)
-        manager = BaseManager(address=('192.168.1.5',8001),authkey=b'shiyanlou')
+        manager = BaseManager(address=('',8001),authkey=b'shiyanlou')
         return manager
 
     def url_manager_proc(self,url_q,conn_q,root_url):
@@ -49,7 +48,7 @@ class NodeManager(object):
             if not store_q.empty():
                 data = store_q.get()
                 if data == "end":
-                    output.outhtml_end(filepath)
+                    output.outhtml_end()
                     return
                 output.data_saved(data)
         except:
