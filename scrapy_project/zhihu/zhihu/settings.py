@@ -59,7 +59,7 @@ ROBOTSTXT_OBEY = False
 #DOWNLOADER_MIDDLEWARES = {
 #    'zhihu.middlewares.ZhihuDownloaderMiddleware': 543,
 #}
-RANDOM_UA_TYPE = "random"
+#**RANDOM_UA_TYPE = "random"
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -70,9 +70,12 @@ RANDOM_UA_TYPE = "random"
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    #'zhihu.pipelines.ZhihuPipeline': 300,
-   'zhihu.pipelines.LgjobsqlPipeline': 1,
+   #'zhihu.pipelines.LgjobsqlPipeline': 1,
+   'zhihu.pipelines.YunQimgoPipeline': 1,
 }
-
+MONGO_URI = 'mongodb://127.0.0.1:2017/'
+MONGO_DATABASE = 'Yunqidb'
+REPLICASET = 'repset'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
