@@ -70,8 +70,6 @@ class ZhihumgoSpider(scrapy.Spider):
 			item_loader.add_css("","")
 			item_loader.add_value("",)
 			item_loader.add_xpath("",'')
-			user_ider name address user_image_url prefession work_exper education resume followees_num
-			follower_num
 			userinfoitem = item_loader.load_item()
 			yield userinfoitem
 		

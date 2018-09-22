@@ -91,7 +91,7 @@ class YunQimgoPipeline(object):
 		return item
 	
 	def _process_bklist_item(self, item):
-		slef.db.bookInfo.insert(dict(item))
+		self.db.bookInfo.insert(dict(item))
 
 	def _process_bkdetail_itme(self, item):
-		slef.db.bookhot.insert(dict(item))
+		self.db.bookhot.insert(dict(item))
