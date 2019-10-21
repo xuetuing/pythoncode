@@ -9,6 +9,9 @@ import pandas
 # 导入技术分析指标函数
 from jqlib.technical_analysis import *
 # 导入ta-lib
+import talib
+import PreFilters
+from operator import methodcaller
 # 初始化函数，设定基准等等
 def initialize(context):
     # 设置参数
@@ -30,6 +33,7 @@ def set_params():
     # 设定沪深300作为基准
     set_benchmark('000300.XSHG')
     # 设定策略相关参数
+    g.lag = 200   # 最近200日未停牌
     g.Max = 1     # 最大持仓
     g.N = 0       # 持仓股数
     g.stock_set = '000300.XSHG' # 用来挑选股票的股票池
@@ -62,35 +66,22 @@ def before_market_open(context):
         g.buy_list = []
         log.info('今日不需购买股票')
     
-    
+# 
 def get_buy_list(context,lag,stk_set):
-    # 先选出当日未停牌的股票
     # 得到当日是否停牌的dataframe，停牌为1，未停牌为0
     try:    # 若股票池为指数
         suspend_info = get_price(get_index_stocks(stk_set),start_date=context.current_dt,end_date=context.current_dt,frequency='daily',fields='paused')['paused'].T
     except: # 若股票池不为指数
         suspend_info = get_price(stk_set,start_date=context.current_dt,end_date=context.current_dt,frequency='daily',fields='paused')['paused'].T
-    # 过滤掉停牌股票
-    unsuspend_index = suspend_info.iloc[:,0]<1
-    unsuspend_stock_ = list(suspend_info[unsuspend_index].index)
-    # 进一步筛选出最近lag+1日未曾停牌的股票list
-    unsuspend_stock = []
-    for stock in unsuspend_stock_:
-        if sum(attribute_history(stock,lag+1,'1d',('paused'),skip_paused=False))[0]==0:
-            unsuspend_stock.append(stock)
-    # 如果没有符合要求的股票则返回空
-    if unsuspend_stock == []:
-        log.info('没有过去十日没停牌的股票')
-        return unsuspend_stock
-    # 筛选出昨日前lag日布林带宽度在lim以内的股票
-    up,mid,dn,wd = get_bollinger(context,unsuspend_stock,lag)
-    narrow_index = wd.iloc[:,-2]<g.lim
-    for day in range(2,lag):
-        narrow_index = narrow_index&(wd.iloc[:,-day]<g.lim)
-    narrow_stock = [unsuspend_stock[i] for i in [ind for ind,bool_value in enumerate(narrow_index) if bool_value==True]]
-    if len(narrow_stock) != 0:
-        log.info('今日潜在满足要求的标的有：'+str(len(narrow_stock)))
-    return narrow_stock
+    # 执行股票过滤规则
+    # 1. 初步过滤股票
+    preFilterNameList = list(filter(lambda m: not m.startwith("__") and not m.endwith("__") and callable(getattr(PreFilters, m)), dir(PreFilters))) 
+    for filterName in preFilterNameList:
+        suspend_info = methodcaller(filterName)(suspend_info)
+
+    if len(unsuspend_stock) != 0:
+        log.info('今日潜在满足要求的标的有：'+str(len(unsuspend_stock)))
+    return unsuspend_stock
     
 def get_bollinger(context,buy,lag):
     # 创建以股票代码为index的dataframe对象来存储布林带信息
@@ -110,8 +101,7 @@ def get_bollinger(context,buy,lag):
     
 def grade_filter(buy,lag,up_line,wd,context):
     # 选出连续开口的股票
-    pass
-    
+    pass   
     
 def get_rank(por):
     # 定义一个数组记录一开始的位置

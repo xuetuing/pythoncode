@@ -5,14 +5,16 @@ print:
 2.get_extras('is_st', ['000001.XSHE', '000018.XSHE'], start_date='2019-01-01', end_date='2019-06-02')
 print: 判断st       
            000001.XSHE	000018.XSHE
-2019-01-02	False	False
-2019-01-03	False	False
-2019-01-04	False	False
-3.  df = get_price(i,end_date=today, frequency='daily', 
+2019-01-02	False	    False
+2019-01-03	False	    False
+2019-01-04	False	    False
+3.  df = get_price(stocks,end_date=today, frequency='daily', 
         fields=None, skip_paused=True, fq='pre', count=10, panel=True)
     today = datetime.date.today()
+    stocks：此参数可以是一个股票代码或股票代码列表
 print:
-               open  close  high   low        volume         money
+            open  close  high   low        volume         money
 2019-09-04  3.72   3.74  3.75  3.70  4.861957e+08  1.808579e+09
 2019-09-05  3.77   3.84  3.92  3.75  1.137178e+09  4.352431e+09
 2019-09-06  3.87   3.91  3.92  3.83  9.682187e+08  3.764084e+09
+4. get_index_stocks('000300.XSHG') 获取指数成份股
