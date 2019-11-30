@@ -2,3 +2,14 @@
    1)常用方法iloc() 和 loc(), loc是按标签获取数据，iloc是按位置获取数据
      df.loc["2018-01-02":"2018-01-10","A":"D"]
      df.iloc[0:5,2:6]
+   2)df.values 转为 ndarray
+2. ndarray
+   ls = s[:]['close'].values   #list或者ndarray
+   new_map = map(lambda a: a + 100, ls) #返回map对象
+   new_map = reduce(lambda a,b: a + b, ls)
+   print(list(new_map)) #map和list的转换
+   ndarray的遍历方法：
+   [rows, cols] = num.shape 
+     for i in range(rows - 1): 
+         for j in range(cols-1): 
+             print(num[j, i]) 
