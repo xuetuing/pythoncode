@@ -35,11 +35,12 @@ class MysqlDB():
 
 
 if __name__ == '__main__':
+    '''
     db = MysqlDB()
     data_path = "C:\\Users\DELL\Downloads\当日账户交易明细查询20220220203935.xls"
     get_data = ExcelData(data_path)
     datas = get_data.readExcel()
     db.insertData(datas)
     print(datas)
-
+    '''
 
