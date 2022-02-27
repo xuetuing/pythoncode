@@ -1,8 +1,7 @@
 import configparser
+import datetime
 import os
 import pymysql
-
-from scrapy.ExcelData import ExcelData
 
 
 class MysqlDB():
@@ -19,18 +18,22 @@ class MysqlDB():
         # 创建游标
         self.cursor = self.conn.cursor()
 
-    def selectData(self):
-        count = self.cursor.execute("SELECT * FROM TRANSACTION")
-        # self.cursor.execute("SELECT COUNT(*) FROM TRANSACTION T where T.TRANS_DATE=%s and T.PERSON_ACCT=%s" % ())
+    def selectData(self, person_acct):
+        today = datetime.date.today()
+        count = self.cursor.execute('''SELECT * 
+          FROM TRANSACTION T WHERE T.TRANS_DATE='%s' AND T.PERSON_ACCT=%s''' % (today, person_acct))
+        print("count: {}".format(count))
         return count
 
     def insertData(self, datas):
-        count = self.selectData()
+        today = datetime.date.today()
+        print("person_acct: {}".format(datas[0]['PERSON_ACCT']))
+        count = self.selectData(datas[0]['PERSON_ACCT'])
         datalen = len(datas)
         if count < datalen:
             for data in datas[count:]:
                 self.cursor.execute('''insert into TRANSACTION(TRANS_DATE, PERSON_ACCT, LENDER_AMOUNT, BALANCE, OPPOSITE_ACCT,OPPOSITE_NAME,CREATED_TIME) 
-                VALUES ('%s',%s,%s,%s,%s,'%s','%s')''' %(data['TRANS_DATE'],data['PERSON_ACCT'],data['LENDER_AMOUNT'],data['BALANCE'],data['OPPOSITE_ACCT'],data['OPPOSITE_NAME'],"2022-02-21"))
+                VALUES ('%s',%s,%s,%s,%s,'%s','%s')''' %(data['TRANS_DATE'],data['PERSON_ACCT'],data['LENDER_AMOUNT'],data['BALANCE'],data['OPPOSITE_ACCT'],data['OPPOSITE_NAME'],today))
         self.conn.commit()
 
 
@@ -43,4 +46,5 @@ if __name__ == '__main__':
     db.insertData(datas)
     print(datas)
     '''
+    # print(datetime.date.today())
 

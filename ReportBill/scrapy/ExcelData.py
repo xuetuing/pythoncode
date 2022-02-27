@@ -1,6 +1,9 @@
 import configparser
+import datetime
 
 import os
+import re
+
 import xlrd
 
 
@@ -13,6 +16,8 @@ class ExcelData():
         cf.read(cur_path + "\Pyconfig.config")
         excelDir = cf.get("IEDownload", "path")
         self.data_path = self.getExcelFile(excelDir)
+        if not self.data_path:
+            return
         # 使用xlrd模块打开excel表读取数据
         self.workbook = xlrd.open_workbook(self.data_path)
         # 根据工作表的名称获取工作表中的内容（方式①）
@@ -81,12 +86,26 @@ class ExcelData():
         excels = []
         files = os.listdir(excelDir)
         for fi in files:
-            subfix = os.path.splitext(fi)[1]
-            if (subfix == '.xls' or subfix == '.xlsx') and "当日账户交易明细查询" in fi:
+            regx = "^当日账户交易明细查询\d+(.xls|.xlsx)$"
+            match = re.search(regx, fi)
+            if match:
                 excels.append(os.path.join(excelDir, fi))
         print(excels)
         excels.sort(key=lambda f: os.path.getctime(f))
         print(excels[-1])
+        today_excel = excels[-1]
+        # 清理历史excel
+        if len(excels) > 10:
+            for i in range(0,len(excels)-1):
+                os.remove(excels[i])
+        fileName = os.path.split(today_excel)[1]
+        date = re.findall(r'\d+', fileName)[0][0:8]
+        today = datetime.date.today().strftime('%Y%m%d')
+        # 判断是否为当日excel文件
+        if not date == today:
+            print('today no data.')
+            return None
+
         return excels[-1]
 
 
@@ -94,3 +113,4 @@ if __name__ == "__main__":
     excel = ExcelData()
     if not excel.colNum:
         print("not data.")
+

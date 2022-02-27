@@ -11,101 +11,102 @@ from scrapy.ExcelData import ExcelData
 from scrapy.MysqlDB import MysqlDB
 
 
-class Scrapy():
+def scrapy():
+    iedriver = webdriver.Ie()
+    iedriver.get('https://ebank.jlnls.com:448/corporbank')  # 填入URL
+    locator = (By.ID, "m2_0101")
+    try:
+        WebDriverWait(iedriver, 150).until(EC.presence_of_element_located(locator))
+    except:
+        print("login timeout!")
+        iedriver.quit()
 
-    def __init__(self):
-        self.iedriver = webdriver.Ie()
-        self.iedriver.get('https://ebank.jlnls.com:448/corporbank')  # 填入URL
-        locator = (By.ID, "menuBar2")
-        try:
-            WebDriverWait(self.iedriver, 60).until(EC.presence_of_element_located(locator))
-        except:
-            print("login timeout!")
-            self.iedriver.quit()
-        # current_window = self.iedriver.current_window_handle
-        # print(current_window)
+    # 点击 账户查询
+    m2_js = 'document.getElementById("m2_0101").click()'
+    iedriver.execute_script(m2_js)
+    sleep(2)
+    gotoPage(iedriver)
+    while True:
+        downLoad(iedriver)
+        insertDataToDB()
+        sleep(15)
+        gotoPage(iedriver)
 
-    def goToPage(self):
-        # 点击 账户查询
-        m2_js = 'document.getElementById("m2_0101").click()'
-        self.iedriver.execute_script(m2_js)
+
+def gotoPage(iedriver):
+    # 点击 账户交易明细查询
+    m3_js = 'document.getElementById("m3_010102").click()'
+    iedriver.execute_script(m3_js)
+
+    # 切换入右侧详情页ifram
+    iframe = iedriver.find_element_by_id('mainFrame')  # 找到iframe这个房间
+    print(iframe)
+    iedriver.switch_to.frame(iframe)  # 进入iframe房间
+
+    downloadButton = (By.ID, "downloadButton")
+    try:
+        WebDriverWait(iedriver, 6).until(EC.presence_of_element_located(downloadButton))
+    except:
+        print("loading page...")
         sleep(3)
 
-        # 点击 账户交易明细self.查询
-        m3_js = 'document.getElementById("m3_010102").click()'
-        self.iedriver.execute_script(m3_js)
-        sleep(5)
 
-        # 切换入右侧详情页ifram
-        iframe = self.iedriver.find_element_by_id('mainFrame')  # 找到iframe这个房间
-        self.iedriver.switch_to_frame(iframe)  # 进入iframe房间
-        # iedriver.switch_to_defalut_content()  # 退出iframe房间
+def downLoad(iedriver):
+    # 单选框
+    detailNum = (By.NAME, "detailNum")
+    try:
+        WebDriverWait(iedriver, 6).until(EC.presence_of_element_located(detailNum))
+    except:
+        print("loading detailNum...")
 
-        # 进入历史交易明细 测试用，如果是当天交易则不用进入
-        history_js = self.iedriver.find_element_by_css_selector(".top_link_off > a").get_attribute("href")
-        print("history js:", history_js)
-        self.iedriver.execute_script(history_js)
-        sleep(5)
+    try:
+        radio = iedriver.find_element_by_name("detailNum")
+    except NoSuchElementException:
+        print("no radio.")
+        radio = None
 
-        # 切换标签后再次切入右侧详情页ifram
-        iframe2 = self.iedriver.find_element_by_id('mainFrame')  # 找到iframe这个房间
-        self.iedriver.switch_to_frame(iframe2)  # 进入iframe房间
-
-        # self.iedriver.quit()
-
-    def downLoad(self):
-        # 单选框
-        try:
-            radio = self.iedriver.find_element_by_name("detailNum")
-        except NoSuchElementException:
-            radio = None
-
-        if radio:
-            value = self.iedriver.find_element_by_name("detailNum").get_attribute("value")
-            print("detail num: ", value)
+    if not radio:
+        print("no data.")
+        return
+    sleep(2)
+    radio = iedriver.find_element_by_name("detailNum")
+    for n in range(1, 4):
+        if radio.is_selected():
+            break
         else:
-            print("no data.")
-            return
-        self.iedriver.find_element_by_name("detailNum").click()
-        for n in range(1, 4):
-            if self.iedriver.find_element_by_name("detailNum").is_selected():
-                break
-            else:
-                self.iedriver.find_element_by_name("detailNum").click()
-                continue
-        # sleep(5)
+            radio.click()
+            continue
 
-        # 点击下载
-        value = self.iedriver.find_element_by_id("downloadButton").get_attribute("value")
-        print("downloadButton num: ", value)
-        download_js = 'document.getElementById("downloadButton").click()'
-        self.iedriver.execute_script(download_js)
-        sleep(3)
+    # 点击下载
+    download_js = 'document.getElementById("downloadButton").click()'
+    iedriver.execute_script(download_js)
+    sleep(3)
 
-        # 默认在取消按钮上，先切换到保存文件上
-        k = PyKeyboard()
-        k.press_key(k.control_key)
-        k.press_key("s")
-        k.release_key(k.control_key)
-        k.release_key("s")
-        sleep(3)
-        k.tap_key(k.enter_key)
+    # 默认在取消按钮上，先切换到保存文件上
+    k = PyKeyboard()
+    k.press_key(k.control_key)
+    k.press_key("s")
+    k.release_key(k.control_key)
+    k.release_key("s")
+    sleep(4)
+    k.tap_key(k.enter_key)
+    # sleep(5)
+    try:
+        WebDriverWait(iedriver, 6).until(not EC.alert_is_present()(iedriver))
+    except:
+        print("alert处理")
 
-    def insertDataToDB(self):
-        db = MysqlDB()
-        excel = ExcelData()
-        datas = excel.readExcel()
-        db.insertData(datas)
-        print(datas)
+
+def insertDataToDB():
+    db = MysqlDB()
+    excel = ExcelData()
+    if not excel.data_path:
+        print('db today no data.')
+        return
+    datas = excel.readExcel()
+    db.insertData(datas)
+    print(datas)
 
 
 if __name__ == '__main__':
-    scrapy = Scrapy()
-    scrapy.goToPage()
-    scrapy.downLoad()
-    while True:
-        scrapy.insertDataToDB()
-        sleep(15)
-        scrapy.iedriver.find_element_by_id('searchButton').click()
-        sleep(2)
-        scrapy.downLoad()
+    scrapy()
