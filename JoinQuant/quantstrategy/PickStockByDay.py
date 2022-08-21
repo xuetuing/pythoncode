@@ -2,7 +2,7 @@
 from quantstrategy.DealFile import *
 
 
-def pickstock():
+def pick_stock():
     # 每天开盘前加载前一天选出的股票
     now = datetime.date.today() - datetime.timedelta(days=3)
     stockdir = 'D:\Test'

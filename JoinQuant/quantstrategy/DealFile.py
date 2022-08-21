@@ -52,13 +52,6 @@ def rename(fpath):
     os.rename(fpath, newpath)
 
 
-def a(n):
-    for b in n:
-        if b == '1':
-            print('ok')
-        else:
-            return b
-
 def checkfile():
     pattern = re.compile(r'\d+', re.I)
     print()
@@ -66,5 +59,3 @@ def checkfile():
 if __name__ == '__main__':
     # walkfile("D:\工具软件应用\HTZQTDX\T0002\\blocknew")
     n = ['1', '2']
-    c = a(n)
-    print(c)
