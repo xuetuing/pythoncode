@@ -6,9 +6,7 @@ def pick_stock():
     # 每天开盘前加载前一天选出的股票
     now = datetime.date.today() - datetime.timedelta(days=3)
     stockdir = 'D:\Test'
-    stockfiles = walkfile(stockdir)
-    stockfile = selectfile(stockfiles, now.strftime('%Y-%m-%d'))
-    stocks = getstocks(stockfile)
+    stocks = getstocks(stockdir, now.strftime('%Y-%m-%d'))
     print(stocks)
 
 

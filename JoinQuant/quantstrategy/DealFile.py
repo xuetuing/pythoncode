@@ -4,24 +4,34 @@ import datetime
 
 
 def walkfile(file_dir):
-    # 遍历文件夹获得files
-    stockfiles = []
+    ''' 遍历通达信软件股票信息文件
+     Returns:
+        所有日期的选股文件
+    '''
+    stock_files = []
     for root, dirs, files in os.walk(file_dir):
         for f in files:
-            stockfiles.append(os.path.join(root, f))
-    return stockfiles
+            stock_files.append(os.path.join(root, f))
+    return stock_files
 
 
-def selectfile(stockfiles, now):
-    for file in stockfiles:
-        time = getdate(file)
-        if now == time:
-            return file
+def selectfile(file_dir, now):
+    ''' 选出昨日的选股文件
+    Returns:
+        昨日的选股文件
+    '''
+    for root, dirs, files in os.walk(file_dir):
+        for f in files:
+            file = os.path.join(root, f)
+            time = getdate(file)
+            if now == time:
+                return file
 
 
-def getstocks(path):
+def getstocks(stockdir, now):
     # path:D:\工具软件应用\HTZQTDX\T0002\blocknew
-    # 获得文件中股票
+    # 获取选股文件中的股票
+    path = selectfile(stockdir, now)
     f = open(path)
     lines = f.readlines()
     content = [stock.strip() for stock in lines if stock.strip()]

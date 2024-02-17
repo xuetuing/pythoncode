@@ -15,7 +15,7 @@ def pick_stock_by_min(stockList):
     Args:
         stockList (List): 传入前日选出的股票列表
     Returns:
-        [List]: 返回符合条件排序后的骨片列表
+        [List]: 返回符合条件排序后的股票列表
     """
     stockMapTmp = []
     for stock in stockList:
@@ -31,7 +31,7 @@ def pick_stock_by_min(stockList):
         compareRes = []
         cout = 0
         for index, row in h.iterrows():
-            cout += 1;
+            cout += 1
             if cout % 5 == 0: 
                 compareRes.append(row['close'] >= row['avg'])
         print((stock + " 'True' count:{}，Total:{}").format(compareRes.count(True), len(compareRes)))
